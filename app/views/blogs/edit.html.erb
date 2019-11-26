@@ -1,0 +1,13 @@
+<div class="contents row">
+  <%= form_tag("/blogs/#{@blog.id}", method: :patch ) do %>
+    <h3>
+      編集する
+    </h3>
+    <input type="text" name="date" value="<%= @blog.date %>" placeholder="日付" autofocus="true">
+    <input type="text" name="title" value="<%= @blog.title %>" placeholder="タイトル" autofocus="true">
+    <input type="text" name="image" value="<%= @blog.image %>" placeholder="Image URL" autofocus="true">
+    <input type="text" name="contents" value="<%= @blog.contents %>" placeholder="目次" autofocus="true">
+    <textarea name="text" placeholder="text" rows="10" cols="30"><%= @blog.text %></textarea>
+    <input type="submit" value="SEND">
+  <% end %>
+</div>
