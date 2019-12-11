@@ -52,3 +52,5 @@ production:
   database: bangkok_blog2019_production
   username: bangkok_blog2019
   password: <%= ENV['BANGKOK_BLOG2019_DATABASE_PASSWORD'] %>
+  pool: 5
+  timeout: 5000
